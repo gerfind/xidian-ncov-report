@@ -12,8 +12,8 @@ def sendmail(information, problem):
     mail_host = ''  #smtp服务器地址
     mail_user = ''   #填写邮箱用户名
     mail_pass = ''   #邮箱密码
-    sender = '发送信箱'  
-    receivers = ['收件信箱']  
+    sender = '发送信箱'  #发件邮箱地址
+    receivers = ['收件信箱']  #收件邮箱地址
     message = MIMEText(information,'plain','utf-8')     
     message['Subject'] = problem
     message['From'] = sender
