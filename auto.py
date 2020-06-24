@@ -6,4 +6,5 @@ while(True):
         submit()
     except:
         pass
-    time.sleep(60*60)
+    time.sleep(1)
+    time.sleep(60*60-1)

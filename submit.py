@@ -68,8 +68,8 @@ dict_ = eval(result.text)
 if (dict_['m'] == '操作成功'):
     try:
         sendmail('成功填报今日疫情通','Success')
+        print('成功发送邮件')
     except:
         pass
-    print('成功发送邮件')
 else:
     print("已经填报！")
