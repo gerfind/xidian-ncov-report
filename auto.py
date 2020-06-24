@@ -7,4 +7,3 @@ while(True):
     except:
         pass
     time.sleep(60*60)
-    print('Hour:', hour)
