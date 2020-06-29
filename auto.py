@@ -1,9 +1,10 @@
 import time
 import submit
+import os
 
 while(True):
     try:
-        submit()
+        submit.submitall()
     except:
         pass
     time.sleep(1)
