@@ -99,9 +99,9 @@ data.update({"sfjcbh":AskBoolean("今日是否接触疑似/确诊人群: "),"jcb
 if data["sfjcbh"] == 1:
     # 接触人群类型
     touch_list=["疑似","确诊"]
-    date.update({"jcbhlx":touch_list[AskInteractive("接触人群类型: ",touch_list)]})
+    data.update({"jcbhlx":touch_list[AskInteractive("接触人群类型: ",touch_list)]})
     # 接触日期
-    date.update({"jcbhrq":AskText("接触日期(YYYY-MM-DD): ")})
+    data.update({"jcbhrq":AskText("接触日期(YYYY-MM-DD): ")})
 
 # 今日是否接触境外人员
 data.update({"sfjcjwry":AskBoolean("今日是否接触境外人员: ")})
@@ -113,9 +113,9 @@ data.update({"sfcyglq":AskBoolean("是否处于隔离期: "),"gllx":"","glksrq":
 if data["sfcyglq"] == 1:
     # 隔离场所
     iso_list=["校内居家隔离","校内医院隔离","校外居家隔离","校外西安市内医学隔离","校外西安市内集中隔离","西安市外地区医学隔离"]
-    date.update({"gllx":iso_list[AskInteractive("隔离场所: ",iso_list)]})
+    data.update({"gllx":iso_list[AskInteractive("隔离场所: ",iso_list)]})
     # 隔离开始日期
-    date.update({"glksrq":AskText("隔离开始日期(YYYY-MM-DD): ")})
+    data.update({"glksrq":AskText("隔离开始日期(YYYY-MM-DD): ")})
     
 # 是否有任何与疫情相关的,值得注意的情况
 data.update({"sfcxzysx":AskBoolean("是否有任何与疫情相关的,值得注意的情况: "),"qksm":""})
@@ -130,3 +130,4 @@ data.update({"remark":AskText("其他信息: ")})
 with open("data.json","w") as fd:
     json.dump(data,fd)
     print("保存成功")
+    print("您还可以在sumit.py中填写发送邮箱以通过邮件进行提醒（可选）。")
