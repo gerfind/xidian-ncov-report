@@ -74,3 +74,5 @@ def submitall():
             pass
     else:
         print("已经填报！")
+
+submitall()
